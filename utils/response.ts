@@ -35,45 +35,15 @@ const createResponseXML = async (params: {
     '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
     'saml:Attribute': [
       {
-        '@Name': 'id',
-        '@NameFormat': 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
-        'saml:AttributeValue': {
-          '@xmlns:xs': 'http://www.w3.org/2001/XMLSchema',
-          '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
-          '@xsi:type': 'xs:string',
-          '#text': user.id,
-        },
-      },
-      {
-        '@Name': 'email',
-        '@NameFormat': 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
+        '@Name': 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name',
+        '@NameFormat': 'urn:oasis:names:tc:SAML:2.0:attrname-format:uri',
         'saml:AttributeValue': {
           '@xmlns:xs': 'http://www.w3.org/2001/XMLSchema',
           '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
           '@xsi:type': 'xs:string',
           '#text': user.email,
-        },
-      },
-      {
-        '@Name': 'firstName',
-        '@NameFormat': 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
-        'saml:AttributeValue': {
-          '@xmlns:xs': 'http://www.w3.org/2001/XMLSchema',
-          '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
-          '@xsi:type': 'xs:string',
-          '#text': user.firstName,
-        },
-      },
-      {
-        '@Name': 'lastName',
-        '@NameFormat': 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
-        'saml:AttributeValue': {
-          '@xmlns:xs': 'http://www.w3.org/2001/XMLSchema',
-          '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
-          '@xsi:type': 'xs:string',
-          '#text': user.lastName,
-        },
-      },
+        }
+      }
     ],
   };
 

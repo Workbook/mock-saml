@@ -8,10 +8,10 @@ export default function Login() {
   const { id, audience, acsUrl, providerName, relayState } = router.query;
 
   const [state, setState] = useState({
-    username: 'jackson',
-    domain: 'example.com',
-    acsUrl: 'https://jackson-demo.boxyhq.com/api/oauth/saml',
-    audience: 'https://saml.boxyhq.com',
+    username: 'piotr',
+    domain: 'deltek.com',
+    acsUrl: 'https://wbtest157751.azurewebsites.net/api/auth/saml',
+    audience: 'SSO',
   });
 
   const acsUrlInp = useRef<HTMLInputElement>(null);
@@ -143,8 +143,7 @@ export default function Login() {
                       className='select select-bordered'
                       onChange={handleChange}
                       value={state.domain}>
-                      <option value='example.com'>@example.com</option>
-                      <option value='example.org'>@example.org</option>
+                      <option value='deltek.com'>@deltek.com</option>
                     </select>
                   </div>
                   <div className='form-control col-span-2'>
